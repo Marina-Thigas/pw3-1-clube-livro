@@ -1,4 +1,4 @@
-package com.etechoracio.clubelivro;
+package br.com.etechoracio.clubelivro;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
