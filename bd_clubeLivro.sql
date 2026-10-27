@@ -10,3 +10,9 @@ CREATE TABLE Livro
 	dataEmprestimo datetime,
 	dataDevolucaoPrevista datetime
 )
+
+
+/*
+insert into Livro(titulo, dono, estatus, dataEmprestimo, dataDevolucaoPrevista) values ('Harry Potter e o Cálice de Fogo', 'Geraldo', 'DISPONIVEL', '2026-10-27T08:30:00', '2026-11-05T08:30:00')
+
+*/ 
