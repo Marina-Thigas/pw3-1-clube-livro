@@ -1,13 +1,13 @@
-package br.com.etechoracio.clube_livro;
+package com.etechoracio.clubelivro;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ClubeLivroApplication {
+public class ClubelivroApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ClubeLivroApplication.class, args);
+		SpringApplication.run(ClubelivroApplication.class, args);
 	}
 
 }

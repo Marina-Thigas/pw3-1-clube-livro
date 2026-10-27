@@ -1,10 +1,10 @@
-package br.com.etechoracio.clube_livro;
+package com.etechoracio.clubelivro;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ClubeLivroApplicationTests {
+class ClubelivroApplicationTests {
 
 	@Test
 	void contextLoads() {
