@@ -1,12 +1,14 @@
 import { Component, inject } from '@angular/core';
-import { LivroService } from '../core/services/livro-service';
+import { LivroService } from '../../core/services/livro.service';
 import { Observable, of } from 'rxjs';
-import { Livro } from '../core/models/livro';
+import { Livro } from '../../core/models/livro';
 import { AsyncPipe } from '@angular/common';
+import { MatCard, MatCardContent, MatCardHeader } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-livro-lista-component',
-  imports: [AsyncPipe],
+  imports: [AsyncPipe, MatCard, MatCardContent, MatCardHeader, MatButtonModule],
   templateUrl: './livro-lista-component.html',
   styleUrl: './livro-lista-component.css',
 })
@@ -17,6 +19,13 @@ export class LivroListaComponent {
 
 
   ngOnInit(): void {
+    this.listaLivros = this.livroService.listar()
+  }
+
+  deletar(id: Number)
+  {
+    this.livroService.deletar(id)
+    console.log(id)
     this.listaLivros = this.livroService.listar()
   }
 }

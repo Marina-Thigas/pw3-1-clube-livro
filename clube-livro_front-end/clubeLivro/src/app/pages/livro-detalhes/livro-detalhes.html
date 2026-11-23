@@ -1,0 +1,25 @@
+@if (livro | async; as item)
+{
+    <mat-card id="card-livro">
+        <mat-card-header id="titulo-card-livro">
+            {{item.titulo}}
+        </mat-card-header>
+        <mat-card-content>
+            <p>Dono: {{item.dono}}</p>
+            <p>Status: {{item.status}}</p>
+            <p>Data de empréstimo: {{item.dataEmprestimo}}</p>
+            <p>Data de devolução prevista: {{item.dataDevolucaoPrevista}}</p>
+            <button mat-raised-button (click)="emprestar()">Emprestar</button>
+            <button mat-raised-button (click)="devolver()" >Devolver</button>
+
+        </mat-card-content>
+
+        
+        
+    </mat-card>
+    
+}
+@else {
+    <p>Livro não encontrado</p>
+}
+

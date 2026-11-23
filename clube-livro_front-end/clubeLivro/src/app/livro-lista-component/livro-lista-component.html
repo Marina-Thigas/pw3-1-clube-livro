@@ -1,8 +1,0 @@
-@for(livro of (listaLivros | async); track livro.id)
-{
-    <p>Título: {{livro.titulo}}</p>
-    <p>Dono: {{livro.dono}}</p>
-    <p>Status: {{livro.status}}</p>
-    <p>Data de empréstimo: {{livro.dataEmprestimo}}</p>
-    <p>Data de devolução prevista: {{livro.dataDevolucaoPrevista}}</p>
-}
