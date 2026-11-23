@@ -14,4 +14,34 @@ export class LivroService {
   {
     return this.http.get<Livro[]>(`${this.apiUrl}`)
   }
+
+  buscarPorId(id: Number) : Observable<Livro>
+  {
+    return this.http.get<Livro>(`${this.apiUrl}/${id}`)
+  }
+
+  cadastrar(livro: Livro): Observable<Livro>
+  {
+    return this.http.post<Livro>(`${this.apiUrl}`, livro)
+  }
+
+  atualizar(livro: Livro, id: Number): Observable<Livro>
+  {
+    return this.http.put<Livro>(`${this.apiUrl}/${id}`, livro)
+  }
+
+  deletar(id: Number): Observable<Livro>
+  {
+    return this.http.delete<Livro>(`${this.apiUrl}/${id}`)
+  }
+
+  emprestar(id: Number): Observable<Livro>
+  {
+    return this.http.post<Livro>(`${this.apiUrl}/${id}/emprestar`, null)
+  }
+
+  devolver(id: Number): Observable<Livro>
+  {
+    return this.http.post<Livro>(`${this.apiUrl}/${id}/devolver`, null)
+  }
 }

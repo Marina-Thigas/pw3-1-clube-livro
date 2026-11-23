@@ -13,6 +13,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/livros")
+@CrossOrigin("*")
 public class LivroController {
     @Autowired
     private LivroService livroService;
