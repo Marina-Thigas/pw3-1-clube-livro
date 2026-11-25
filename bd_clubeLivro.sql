@@ -14,5 +14,6 @@ CREATE TABLE Livro
 
 /*
 insert into Livro(titulo, dono, estatus, dataEmprestimo, dataDevolucaoPrevista) values ('Harry Potter e o Cálice de Fogo', 'Geraldo', 'DISPONIVEL', '2026-10-27T08:30:00', '2026-11-05T08:30:00')
+insert into Livro(titulo, dono, estatus, dataEmprestimo, dataDevolucaoPrevista) values ('Vidas Secas', 'Fulano', 'DISPONIVEL', '2026-10-27T08:30:00', '2026-11-05T08:30:00')
 
 */ 

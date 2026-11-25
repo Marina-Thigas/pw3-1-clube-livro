@@ -11,6 +11,7 @@
             <p>Data de devolução prevista: {{livro.dataDevolucaoPrevista}}</p>
 
             <button mat-raised-button (click)="deletar(livro.id)">Excluir</button>
+            <button mat-raised-button routerLink="detalhes/{{livro.id}}">Ver detalhes</button>
         </mat-card-content>
     </mat-card>
     

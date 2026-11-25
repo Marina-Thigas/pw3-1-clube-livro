@@ -5,10 +5,12 @@ import { Livro } from '../../core/models/livro';
 import { AsyncPipe } from '@angular/common';
 import { MatCard, MatCardContent, MatCardHeader } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { RouterLink } from '@angular/router';
+
 
 @Component({
   selector: 'app-livro-lista-component',
-  imports: [AsyncPipe, MatCard, MatCardContent, MatCardHeader, MatButtonModule],
+  imports: [AsyncPipe, MatCard, MatCardContent, MatCardHeader, MatButtonModule, RouterLink],
   templateUrl: './livro-lista-component.html',
   styleUrl: './livro-lista-component.css',
 })
@@ -24,8 +26,8 @@ export class LivroListaComponent {
 
   deletar(id: Number)
   {
-    this.livroService.deletar(id)
-    console.log(id)
-    this.listaLivros = this.livroService.listar()
+    this.livroService.deletar(id).subscribe(() => {
+        this.listaLivros = this.livroService.listar();
+    })
   }
 }
